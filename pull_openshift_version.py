@@ -5,11 +5,6 @@ import argparse
 import os
 
 def get_args():
-    """
-    This simple tool was created to help teams download desired openshift versions,
-    and simplify the preparation to the whitening process for them.
-    All rights reserved to Dave™
-    """
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
         description='Process args for usage in the script')
@@ -29,9 +24,6 @@ def get_args():
     return args
 
 def main():
-    """
-    All rights reserved to Dave™
-    """
     args = get_args()
     if args.dry_run:
         action = ('oc adm release mirror -a %s --to-dir=%s/mirror '
